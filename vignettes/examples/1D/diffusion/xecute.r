@@ -36,6 +36,7 @@ solNum <- model$dynamics(times=times, jactype="bandint", bandup=1, banddown=1)
 erfc <- function(x) { 2 * pnorm(x * sqrt(2), lower=FALSE) }
 solAna <- function (x,t,d,cb) { cb * erfc(x / 2 / sqrt(d*t)) }
 
+
 # Graphically compare numerical and analytical solution
 nc <- 2
 nr <- ceiling(length(times) / nc)
